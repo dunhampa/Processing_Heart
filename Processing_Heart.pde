@@ -3,15 +3,15 @@ PShape heart;
  
 void setup(){
   
-      size(700,700,P2D);
+    size(700,700,P2D);
     int HeartSize=15;
   
     heart=createShape();
     heart.beginShape();
-    heart.fill(200,110,156);
-    heart.stroke(5);
+    heart.fill(200,80,80);
+    heart.stroke(7);
 
-    for (float t=0; t<=2*PI; t+=.01){
+    for (float t=0; t<=2*PI; t+=.0001){
       heart.vertex((-16*HeartSize*pow(sin(t), 3)), (-(13*HeartSize*cos(t)-5*HeartSize*cos(2*t)-2*HeartSize*cos(3*t)-HeartSize*cos(4*t))));
   }
   // Don't "CLOSE" a shape if you want it to be a path
@@ -25,7 +25,7 @@ void setup(){
 void draw(){
   
   frameRate(60);
-  background(0);
+  background((int(random(0,255))),(int(random(0,255))),(int(random(0,255))));
   
     translate(350,350);
     //stroke(250, 0, 0);
@@ -33,7 +33,10 @@ void draw(){
     //strokeWeight(2); 
     //heart.setFill(color(random(255)));
     shape(heart);
-    heart.setFill(color(105,155,25));
+    heart.setFill(color((int(random(0,255))),(int(random(0,255))),(int(random(0,255)))));
+    heart.setStroke(color((int(random(0,255))),(int(random(0,255))),(int(random(0,255)))));
+    heart.setStrokeWeight(20);
+    delay(1000);
 
 }
   
