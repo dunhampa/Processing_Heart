@@ -35,7 +35,7 @@ void draw(){
     shape(heart);
     heart.setFill(color((int(random(0,255))),(int(random(0,255))),(int(random(0,255)))));
     heart.setStroke(color((int(random(0,255))),(int(random(0,255))),(int(random(0,255)))));
-    heart.setStrokeWeight(20);
+    heart.setStrokeWeight(int(random(1,45)));
     delay(1000);
 
 }
